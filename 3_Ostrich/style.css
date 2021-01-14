@@ -1,5 +1,18 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 
+:root {
+  --back1: #dae7de;
+  --back2: #008a69;
+  --back3: #f44607;
+  --back4: #f7abc5;
+  --back5: #5f5fa9;
+  --back6: #ffc128;
+  --back7: #f97374;
+
+  --font1: #f44607;
+  --font2: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,9 +24,82 @@ body {
 }
 
 body {
-  background-color: #dde1d4;
-  padding: 15px;
+  background-color: #000;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0 auto;
+}
+
+.quarter-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  min-width: 0 !important; /* For ellipsis */
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.container div {
+  position: relative;
+  min-width: 0;
+}
+
+.container div:not(.quarter-box) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.depth1 .text {
+  font-size: 3em;
+}
+
+.depth2 .text {
+  font-size: 1.5em;
+}
+
+.container > div:nth-child(1) {
+  background-color: var(--back1);
+  color: var(--font1);
+}
+
+.container > div:nth-child(2) {
+  background-color: var(--back2);
+  color: var(--font2);
+}
+
+.container > div:nth-child(3) {
+  background-color: var(--back3);
+  color: var(--font2);
+}
+
+.container > div:nth-child(4) > div:nth-child(1) {
+  background-color: var(--back4);
+  color: var(--font1);
+}
+
+.container > div:nth-child(4) > div:nth-child(2) {
+  background-color: var(--back5);
+  color: var(--font2);
+}
+
+.container > div:nth-child(4) > div:nth-child(3) {
+  background-color: var(--back6);
+  color: var(--font1);
+}
+
+.container > div:nth-child(4) > div:nth-child(4) {
+  background-color: var(--back7);
+  color: var(--font2);
 }
