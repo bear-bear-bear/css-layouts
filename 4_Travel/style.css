@@ -1,8 +1,132 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 
+:root {
+  --column-length: 20rem;
+  --row-length: 30rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0.66rem;
+  background-color: #ddd;
+}
+
+body::-webkit-scrollbar-thumb {
+  box-shadow: inset 1px 1px 10px black;
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--column-length), 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(var(--row-length), 1fr));
+  grid-auto-rows: minmax(var(--row-length), 1fr);
+}
+
+.box {
+  position: relative;
+  min-width: var(--column-length);
+  min-height: var(--row-length);
+  cursor: pointer;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.1s;
+}
+
+.box:hover::before {
+  opacity: 0;
+}
+
+.box--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+  min-width: 0;
+}
+
+.box__title,
+.box__writer {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.box__title {
+  top: 10%;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  height: 3.6em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+
+.box--text:hover > .box__title {
+  -webkit-line-clamp: 7; /* 라인수 */
+  height: 8.4em; /* line-height 가 1.2em 이고 7라인을 자르기 때문에 height는 1.2em * 7 = 8.4em */
+  text-shadow: 1px 1px 5px black;
+}
+
+.box__writer {
+  bottom: 10%;
+  line-height: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.box--img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box--a {
+  background-image: url('./img/a.jpg');
+}
+
+.box--b {
+  background-image: url('./img/b.jpg');
+}
+
+.box--c {
+  background-image: url('./img/c.jpg');
+}
+
+.box--d {
+  background-image: url('./img/d.jpg');
 }
