@@ -1,8 +1,88 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
-  width: 100%;
-  height: 100vh;
+}
+
+.container {
+}
+
+/* 왼쪽 공간 (웹사이트 리스트) */
+.webs {
+}
+
+.webs__list {
+}
+
+.webs__item {
+}
+
+.webs__item__header {
+}
+
+.webs__item__link {
+}
+
+.webs__item__desc {
+}
+
+.webs__item__year-wrap {
+}
+
+.webs__item__year {
+}
+
+/* 나뉨선 */
+.devide-line {
+}
+
+.devide-line__text {
+}
+
+.devide-line__text--top {
+}
+
+.devide-line__text--bottom {
+}
+
+.devide-line__center-icon {
+}
+
+/* 오른족 공간 (게시글 리스트) */
+.posts {
+}
+
+.posts__header {
+}
+
+.posts__header__option {
+}
+
+.posts__header__option::before {
+}
+
+.posts__header__option--selected::before {
+}
+
+.posts__list {
+}
+
+.posts__item {
+}
+
+.posts__item__main-title {
+}
+
+.posts__item__sub-title {
 }
