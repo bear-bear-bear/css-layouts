@@ -1,12 +1,18 @@
 {
   /*
 <li class='webs__item'>
-  <p class='webs__item__header'></p>
-  <a href='#' class='webs__item__link'></a>
-  <p class='webs__item__desc'></p>
-  <div class='webs__item__year-wrap'>
-      <p class='webs__item__year'></p>
-  </div>
+    <section class='webs__item__wrap webs__item__wrap--header'>
+        <p class='webs__item__header'></p>
+    </section>
+    <section class='webs__item__wrap webs__item__wrap--link'>
+        <a href='#' class='webs__item__link'></a>
+    </section>
+    <section class='webs__item__wrap webs__item__wrap--desc'>
+        <p class='webs__item__desc'></p>
+    </section>
+    <section class='webs__item__wrap webs__item__wrap--year'>
+        <p class='webs__item__year'></p>
+    </section>
 </li>
     */
 }
@@ -14,8 +20,8 @@
 {
   /*
 <li class='posts__item'>
-  <h4 class='posts__item__main-title'></h4>
-  <p class='posts__item__sub-title'></p>
+    <h4 class='posts__item__main-title'></h4>
+    <p class='posts__item__sub-title'></p>
 </li>
     */
 }
@@ -23,6 +29,8 @@
 const getMeanlessStr = (wordCnt = 1) => {
   const fooooo =
     'Lorem ipsum dolor sit amet consectetur adipisicing elit Voluptatum abAd animi quasi incidunt sed iste rem maiores voluptate officia aperiam reiciendis praesentium doloribus repellat cupiditate voluptatum quaerat ea veritatis';
+
+  if (wordCnt >= 29) return [fooooo];
 
   const reg = new RegExp(`\\w+( \\w+){${wordCnt - 1}}`, 'g');
 
@@ -49,12 +57,18 @@ const returnFakeWebItems = (num) => {
     const year = Math.ceil(10 + Math.random() * 5); // 11 ~ 20
 
     item.innerHTML = `
-<p class='webs__item__header'>${bars[barIdx_a]}</p>
-<a href='#' class='webs__item__link'>${foos[fooIdx_a]}</a>
-<p class='webs__item__desc'>${bars[barIdx_b]}, ${foos[fooIdx_b]}</p>
-<div class='webs__item__year-wrap'>
+<section class='webs__item__wrap webs__item__wrap--header'>
+    <p class='webs__item__header'>${foos[fooIdx_a]}</p>
+</section>
+<section class='webs__item__wrap webs__item__wrap--link'>
+    <a href='#' class='webs__item__link'>${bars[barIdx_a]}</a>
+</section>
+<section class='webs__item__wrap webs__item__wrap--desc'>
+    <p class='webs__item__desc'>${bars[barIdx_b]}, ${foos[fooIdx_b]}</p>
+</section>
+<section class='webs__item__wrap webs__item__wrap--year'>
     <p class='webs__item__year'>20${year} → present</p>
-</div>
+</section>
 `.trim();
 
     DOMFragment.append(item);
@@ -67,7 +81,8 @@ const returnFakePostItems = (num) => {
   const DOMFragment = document.createDocumentFragment();
 
   const foos = getMeanlessStr(2);
-  const bars = getMeanlessStr(6);
+  const bars = getMeanlessStr(29);
+
   const foosLength = foos.length;
   const barsLength = bars.length;
 
@@ -95,7 +110,7 @@ const createFakeData = () => {
   webList.append(fakeWebs);
 
   const postList = document.querySelector('.posts__list');
-  const fakePosts = returnFakePostItems(40);
+  const fakePosts = returnFakePostItems(60);
   postList.append(fakePosts);
 };
 
