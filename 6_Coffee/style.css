@@ -2,123 +2,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
 :root {
- --cr1: #f0e8e0;
- --cr2: #0f2714;
- --gap: 0.15rem;
+  --cr1: #f0e8e0;
+  --cr2: #0f2714;
+  --gap: 0.15rem;
 }
 
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
- text-decoration: none;
- color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 html,
 body {
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
- position: relative;
- display: flex;
- justify-content: center;
- align-items: center;
- padding: 1rem;
- font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-  'Open Sans', 'Helvetica Neue', sans-serif;
- background: no-repeat center/cover url(./img/back.jpg);
- overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  background: no-repeat center/cover url(./img/back.jpg);
+  overflow: hidden;
 }
 
 body::before {
- content: '';
- position: absolute;
- width: 100%;
- height: 100%;
- background-color: rgba(0, 0, 0, 0.6);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* 컨테이너 */
 .container {
- position: relative;
- display: grid;
- grid-template:
-  'trav-top trav-top trav-top' 1.8rem
-  'vtcl-left center-box vtcl-right' 1fr
-  'trav-bottom trav-bottom trav-bottom' 1.8rem
-  / 2rem 1fr 2rem;
- padding: var(--gap);
- gap: var(--gap);
- width: 100%;
- height: 100%;
- max-width: 80rem;
- max-height: 48rem;
- background-color: var(--cr1);
+  position: relative;
+  display: grid;
+  grid-template:
+    'trav-top trav-top trav-top' 1.8rem
+    'vtcl-left center-box vtcl-right' 1fr
+    'trav-bottom trav-bottom trav-bottom' 1.8rem
+    / 2rem 1fr 2rem;
+  padding: var(--gap);
+  gap: var(--gap);
+  width: 100%;
+  height: 100%;
+  max-width: 80rem;
+  max-height: 48rem;
+  background-color: var(--cr1);
 }
 
 /* 위, 아래 travolator */
 .trav-wrap {
- display: flex;
- align-items: center;
- padding: 0.33rem 0;
- overflow: hidden;
- background-color: var(--cr2);
+  display: flex;
+  align-items: center;
+  padding: 0.33rem 0;
+  overflow: hidden;
+  background-color: var(--cr2);
 }
 
 .trav-wrap--top {
- grid-area: trav-top;
+  grid-area: trav-top;
 }
 
 .trav-wrap--bottom {
- grid-area: trav-bottom;
+  grid-area: trav-bottom;
 }
 
 .trav {
- position: relative;
- height: 100%;
- font-size: 1rem;
- font-style: italic;
- font-weight: 500;
- white-space: nowrap;
- letter-spacing: 0.1rem;
- text-transform: uppercase;
- color: var(--cr1);
+  position: relative;
+  height: 100%;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--cr1);
 }
 
 .trav:nth-child(n + 2) {
- margin-left: 5rem;
+  margin-left: 5rem;
 }
 
 .trav--top {
- animation: trav1 200s infinite linear;
+  animation: trav1 200s infinite linear;
 }
 
 @keyframes trav1 {
- 0% {
-  left: 100%;
- }
+  0% {
+    left: 100%;
+  }
 
- 100% {
-  left: -750%;
- }
+  100% {
+    left: -750%;
+  }
 }
 
 .trav--bottom {
- animation: trav2 240s infinite linear;
+  animation: trav2 240s infinite linear;
 }
 
 @keyframes trav2 {
- 0% {
-  left: 100%;
- }
+  0% {
+    left: 100%;
+  }
 
- 100% {
-  left: -600%;
- }
+  100% {
+    left: -600%;
+  }
 }
 
 /* 왼쪽, 오른쪽 vertical 박스 공통 */
@@ -126,228 +126,228 @@ body::before {
 }
 
 .vtcl-text {
- writing-mode: vertical-lr;
- text-orientation: upright;
- letter-spacing: -0.33rem;
- text-transform: uppercase;
- font-style: oblique 20deg;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: -0.33rem;
+  text-transform: uppercase;
+  font-style: oblique 20deg;
 }
 
 /* 왼쪽 vertical */
 
 .vtcl-wrap--left {
- grid-area: vtcl-left;
- display: grid;
- grid-template-rows: 5.5fr 3.5fr 1fr;
- row-gap: var(--gap);
+  grid-area: vtcl-left;
+  display: grid;
+  grid-template-rows: 5.5fr 3.5fr 1fr;
+  row-gap: var(--gap);
 }
 
 .vtcl__nav {
- display: flex;
- align-items: center;
- justify-content: center;
- background-color: var(--cr1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cr1);
 }
 
 .vtcl__nav__list {
 }
 
 .vtcl__nav__item {
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .vtcl__nav__item:nth-child(n + 2)::before {
- content: '▪';
- margin: 0.5rem;
- color: var(--cr2);
- font-size: 0.8rem;
+  content: '▪';
+  margin: 0.5rem;
+  color: var(--cr2);
+  font-size: 0.8rem;
 }
 
 .vtcl__nav__link {
- font-weight: 700;
- font-size: 0.95rem;
- color: var(--cr2);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--cr2);
 }
 
 .vtcl__news-letter {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- background-color: var(--cr2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cr2);
 }
 
 .vtcl__news-letter__link {
- display: flex;
- align-items: center;
- justify-content: center;
- text-orientation: initial !important;
- letter-spacing: 0.12rem !important;
- transform: rotateZ(180deg);
- color: var(--cr1);
- font-weight: 500;
- font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-orientation: initial !important;
+  letter-spacing: 0.12rem !important;
+  transform: rotateZ(180deg);
+  color: var(--cr1);
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .vtcl__news-letter__icon {
- position: relative;
- top: 0.33rem;
- left: -0.05rem;
- font-size: 0.9rem;
- color: var(--cr1);
+  position: relative;
+  top: 0.33rem;
+  left: -0.05rem;
+  font-size: 0.9rem;
+  color: var(--cr1);
 }
 
 .vtcl__social {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- background-color: var(--cr2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cr2);
 }
 
 .vtcl__social__link {
- margin: 0.2rem;
+  margin: 0.2rem;
 }
 
 .vtcl__social__icon {
- color: var(--cr1);
+  color: var(--cr1);
 }
 /* 오른쪽 vertical */
 .vtcl-wrap--right {
- grid-area: vtcl-right;
- display: grid;
- grid-template-rows: 1fr 1fr;
- row-gap: var(--gap);
+  grid-area: vtcl-right;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: var(--gap);
 }
 
 .vtcl__order {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- color: var(--cr1);
- background-color: var(--cr2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cr1);
+  background-color: var(--cr2);
 }
 
 .vtcl__order__icon {
- font-size: 0.7rem;
- color: var(--cr1);
+  font-size: 0.7rem;
+  color: var(--cr1);
 }
 
 .vtcl__order__link {
- margin: 2.5rem 0;
- font-weight: 500;
- font-size: 0.9rem;
+  margin: 2.5rem 0;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .vtcl__reservations {
- background-color: var(--cr2);
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- color: var(--cr1);
- background-color: var(--cr2);
+  background-color: var(--cr2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cr1);
+  background-color: var(--cr2);
 }
 
 .vtcl__reservations__icon {
- font-size: 0.7rem;
- color: var(--cr1);
+  font-size: 0.7rem;
+  color: var(--cr1);
 }
 
 .vtcl__reservations__link {
- margin: 2.5rem 0;
- font-weight: 500;
- font-size: 0.9rem;
+  margin: 2.5rem 0;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 /* 가운데 메인 컨텐츠 박스 */
 .center-box-wrap {
- grid-area: center-box;
- position: relative;
- display: grid;
- grid-template-columns: 1fr 1fr;
- background-color: var(--cr2);
+  grid-area: center-box;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cr2);
 }
 
 .center-box__image {
- position: relative;
+  position: relative;
 }
 
 .center-box__image::before {
- content: '';
- position: absolute;
- width: 100%;
- height: 100%;
- background-color: rgba(0, 0, 0, 0.2);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .center-box__image--left {
- background: no-repeat center/cover url(./img/left.jpg);
+  background: no-repeat center/cover url(./img/left.jpg);
 }
 
 .center-box__image--right {
- background: no-repeat center/cover url(./img/right.jpg);
+  background: no-repeat center/cover url(./img/right.jpg);
 }
 
 .center-box__txt-wrap {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- z-index: 100;
- display: flex;
- flex-direction: column;
- align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .center-box__txt {
- font-size: 9rem;
- font-weight: 500;
- letter-spacing: 0.5rem;
- text-shadow: 1px 1px 10px black;
- color: var(--cr1);
- font-family: 'Dancing Script', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: 9rem;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  text-shadow: 1px 1px 10px black;
+  color: var(--cr1);
+  font-family: 'Dancing Script', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 /* 채팅 아이콘 */
 .chat-icon-wrap {
- position: absolute;
- right: 1.8rem;
- bottom: 1.8rem;
- display: flex;
- justify-content: center;
- align-items: center;
- width: 2.5rem;
- height: 2.5rem;
- background-color: var(--cr1);
- border-radius: 3px;
+  position: absolute;
+  right: 1.8rem;
+  bottom: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--cr1);
+  border-radius: 3px;
 }
 
 .chat-icon {
- position: relative;
- top: 0.1rem;
- color: var(--cr2);
- font-size: 1.8rem;
+  position: relative;
+  top: 0.1rem;
+  color: var(--cr2);
+  font-size: 1.8rem;
 }
 
 @media screen and (max-width: 1024px) {
- html {
-  font-size: 13px;
- }
+  html {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 768px) {
- html {
-  font-size: 10px;
- }
+  html {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 320px) {
- .center-box__txt {
-  font-size: 4.5rem;
- }
+  .center-box__txt {
+    font-size: 4.5rem;
+  }
 }
