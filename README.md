@@ -1,3 +1,15 @@
 # css-layouts
 
-This project is updating...
+##### css-layout 2주 챌린지 프로젝트
+
+---
+
+
+<img src="https://github.com/bear-bear-bear/css-layouts/blob/master/previews/all.PNG" width="100%">
+
+- Go to website → <a href="https://bear-bear-bear.github.io/css-layouts/">CSS-Layouts 바로가기</a>
+  <br/><br/>
+- 사용된 스택
+  - html
+  - css
+  - js
