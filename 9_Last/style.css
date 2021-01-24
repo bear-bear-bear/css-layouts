@@ -1,0 +1,90 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* 왼쪽 텍스트 박스들 */
+.left {
+}
+.left__box {
+}
+.left__box--first {
+}
+.left__box--second {
+}
+.left__box--third {
+}
+.left__header {
+}
+.left__main {
+}
+.left__footer {
+}
+.left__title {
+}
+.left__title--h1 {
+}
+.left__title--h2 {
+}
+.left__para {
+}
+.left__nav {
+}
+.left__nav__list {
+}
+.left__nav__item {
+}
+.left__nav__link {
+}
+.left__address {
+}
+.left__lang-select {
+}
+.left__lang-select__lang {
+}
+
+/* 오른쪽 그림 박스들 */
+.right {
+}
+.right__box {
+}
+.right__box--first {
+}
+.right__box--second {
+}
+.right__box--third {
+}
+.right__box--fourth {
+}
+.right__box--fifth {
+}
+.right__box--sixth {
+}
+.right__box--seventh {
+}
+.right__box--eighth {
+}
+.right__box--ninth {
+}
+.right__box--tenth {
+}
+.right__box--eleventh {
+}
