@@ -130,3 +130,14 @@ body::-webkit-scrollbar-thumb {
 .box--d {
   background-image: url('./img/d.jpg');
 }
+
+@media screen and (max-width: 400px) {
+  :root {
+    --column-length: 100%;
+    --row-length: 25rem;
+  }
+
+  html {
+    font-size: 15.5px;
+  }
+}
