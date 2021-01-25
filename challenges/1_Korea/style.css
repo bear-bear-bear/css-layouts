@@ -120,6 +120,8 @@ body {
 
   .paper {
     min-width: 100vw;
+    height: initial;
+    max-height: 43rem;
     box-shadow: none;
     padding: 1rem;
   }
