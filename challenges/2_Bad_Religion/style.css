@@ -24,7 +24,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #dde1d4;
-  padding: 15px;
+  padding: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
   max-width: 650px;
@@ -40,8 +40,9 @@ body {
     / 1fr 1fr 1fr;
   gap: 0.66rem;
   padding: 0.66rem;
-  width: 572.8px;
-  height: 800px;
+  width: 100%;
+  max-width: 572.8px;
+  height: 100%;
   box-shadow: -10px 0 10px -3px #fff, 15px 0 20px -3px #777, 0 10px 15px -1.5px #777;
 }
 
@@ -57,12 +58,19 @@ body {
   align-self: flex-end;
   display: flex;
   flex-direction: column;
-  height: 50%;
+  min-height: 50%;
   font-size: var(--small-font);
   font-weight: 500;
   letter-spacing: 0.01rem;
   line-height: 120%;
   color: var(--white);
+  min-width: 0;
+}
+
+.part-a > p > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .part-b {
@@ -109,4 +117,47 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 0.66rem;
+}
+
+@media screen and (max-width: 768.1px) {
+  :root {
+    --small-font: 0.8rem;
+    --medium-font: 1.9rem;
+    --large-font: 8rem;
+  }
+
+  html {
+    font-size: 15.5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    --small-font: 0.66rem;
+    --medium-font: 1.7rem;
+    --large-font: 5.5rem;
+  }
+
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  :root {
+    --small-font: 0.55rem;
+    --medium-font: 1.55rem;
+    --large-font: 5rem;
+  }
+
+  html {
+    font-size: 14.5px;
+  }
+
+  .part-b > p,
+  .part-d > p:nth-child(1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
