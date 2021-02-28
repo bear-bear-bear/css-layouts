@@ -6,5 +6,4 @@
 
 <img src="https://github.com/bear-bear-bear/css-layouts/blob/master/previews/all.PNG" width="100%">
 
-### 웹 사이트 바로가기
-[CSS-Layouts](https://bear-bear-bear.github.io/css-layouts/)
+### [웹 사이트 바로가기](https://bear-bear-bear.github.io/css-layouts/)
